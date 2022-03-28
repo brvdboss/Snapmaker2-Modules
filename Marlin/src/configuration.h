@@ -99,6 +99,7 @@ typedef enum {
   MODULE_LINEAR_TMC        = 12, // 12
   MODULE_3DP_DUAL_EXTRUDER = 13, // 13
   MODULE_LASER_10W         = 14, // 14
+  MODULE_TOUCHPROBE        = 15, // 15
 } MODULE_TYPE;
 
 

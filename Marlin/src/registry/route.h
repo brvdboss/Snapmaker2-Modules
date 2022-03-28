@@ -39,6 +39,7 @@
 #include "src/module/stop_module.h"
 #include "src/module/rotate_module.h"
 #include "src/module/laser_head_10w.h"
+#include "src/module/touchprobe.h"
 class Route {
  public:
   void Invoke();

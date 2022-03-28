@@ -95,6 +95,10 @@ const uint16_t fan_func_list_[] = {
   FUNC_SET_FAN_MODULE,
 };
 
+const uint16_t touchprobe_func_list_[] = {
+  FUNC_REPORT_PROBE,
+};
+
 Route routeInstance;
 void Route::Init() {
   uint32_t moduleType = registryInstance.module();
@@ -177,6 +181,12 @@ void Route::Init() {
       module_ = new RotateModule;
       module_->Init();
       SetBaseVersions(1, 9, 0);
+      break;
+    case MODULE_TOUCHPROBE:
+      module_ = new TouchProbe;
+      module_->Init();
+      FUNC_LIST_INIT(touchprobe_func_list_);
+      SetBaseVersions(1, 0, 0);
       break;
     default:
       module_ = new ModuleBase();
